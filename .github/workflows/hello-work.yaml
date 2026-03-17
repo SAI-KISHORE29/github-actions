@@ -1,8 +1,11 @@
 name: Hello world
-on: [push]
+on: 
+  workflow_dispatch:
+env: 
+  MY_VARIABLES: ${{ secrets.MY_VARIABLES }}
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world action
-        run: echo "Hello world!"
+      - name: Print variables
+        run: echo "Variables:" $MY_VARIABLES
