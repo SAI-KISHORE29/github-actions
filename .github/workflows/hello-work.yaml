@@ -3,6 +3,7 @@ on:
   push:
     braches:
       - develop
+run-name: workflow from develop branch
 jobs:
   build:
     runs-on: ubuntu-latest
